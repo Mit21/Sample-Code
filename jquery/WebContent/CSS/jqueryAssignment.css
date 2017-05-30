@@ -1,0 +1,40 @@
+.mainDiv{
+	background-color:#F6F6F6;
+}
+.subDiv{
+	background-color:#DDDDDD;
+}
+.contentDiv{
+	margin-bottom:8px;
+}
+.formDiv{
+	background-color:#FFFFFF;
+	border-right:3px solid #DDDDDD;
+	padding-top: 40px;
+}
+.tableDiv{
+	background-color:#FFFFFF;
+	border-left:3px solid #DDDDDD;
+	padding-top: 40px;
+}
+.forInput{
+	background-color: #dddddd;
+    border-radius: 4px;
+    height: 42px;
+    margin-bottom: 30px;
+    width: 430px;
+    
+}
+#btnSubmit{
+	height: 42px;
+	width:90px;
+	background-color: #434343;
+	border-radius: 4px;
+	color:white;
+	
+}
+.jsonTable{
+	border:3px solid #DDDDDD;
+	border-radius: 4px;
+	text-transform: capitalize;
+}

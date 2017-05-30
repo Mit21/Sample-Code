@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>location</title>
+
+ </head>
+<body>
+<h2>Locations</h2>
+<ul class="location" class="list-unstyled" >
+ <li data-ng-repeat="item in location" class="location">
+<span id="state">{{state}}</span>
+ <img  id="picture4"data-ng-src={{item.image_path}}> 
+   
+<span id="email">{{item.email }} </span><br>
+<span id="phoneNumber">{{item.phone}}</span>  
+
+ </li>
+ </ul>
+
+
+
+
+</body>
+</html>

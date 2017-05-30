@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>WishList</title>
+</head>
+<body>
+
+<ul  data-ng-repeat="wishList in wishListArr" >
+ <li  data-ng-animate="animate">
+  <img  class="picture"data-ng-src={{wishList.image_path}}>   
+   <span  class="price_detail"style="color:red">{{wishList.price }}   {{wishList.shipping_details}}</span>
+    <button class="buy_button" data-ng-click="addToCart(wishList)">Add to cart</button> 
+   
+   </li>
+ </ul>
+
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>computerView</title>
+<link rel="stylesheet" href="css/shop.css"/>
+</head>
+<body>
+
+<ul  class="computerlist" data-ng-repeat="item in computer | filter:query">
+ <li class="computerliste list-unstyled">
+
+ <img  class="picture"data-ng-src="{{item.image_path}}"/>   
+  <!-- <h5 class="product" style="color:blue"><i>product description:</i><br> {{item.product_description}}</h5> --> 
+<span  class="price_detail"style="color:red">{{item.price | filter:query}}   {{item.shipping_details}}</span>
+ <button class="buy_button" data-ng-click="addToCart(item)">Add to cart</button> 
+ <button class="wishList_button" data-ng-click="addToWishList(item)">Add to wishlist</button> 
+ </li>
+ </ul>
+
+
+
+
+
+
+<script type="text/javascript" src="javascript/shop.js"></script>
+
+</body>
+</html>

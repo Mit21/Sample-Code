@@ -1,0 +1,30 @@
+<table class="table table-striped table-hover table-users">
+	<thead>
+		<tr>
+			<th>Employee Id</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Middle Name</th>
+			<th>Date Of Birth</th>
+			<th>Age</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr data-ng-repeat="employee in emps">
+			<td>{{employee.EmployeeId}}</td>
+			<td>{{employee.FirstName}}</td>
+			<td>{{employee.LastName}}</td>
+			<td>{{employee.MiddleName}}</td>
+			<td>{{employee.Birthdate}}</td>
+			<td>{{employee.Age}}</td>
+
+
+
+			<td><a class="btn mini blue-stripe" data-ng-click="edit($index)">Edit</a></td>
+			<td><a class="btn mini blue-stripe" data-ng-click="delete($index)">Delete</a></td>
+		</tr>
+
+	</tbody>
+
+</table>
+<input type="button" class="btn btn-primary" name="New" data-ng-click="pass()>

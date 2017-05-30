@@ -1,0 +1,101 @@
+
+<html data-ng-app="animate"	xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+
+<title></title>
+
+
+<script src="http://code.angularjs.org/1.2.2/angular.js"></script>
+
+
+<script src="http://code.angularjs.org/1.2.2/angular-animate.min.js"></script>
+
+
+<style>
+.animate.ng-enter {
+	-webkit-transition: 1s;
+	transition: 1s;
+	margin-left: 100%;
+}
+
+.animate.ng-enter-active {
+	margin-left: 0;
+}
+
+.animate.ng-leave {
+	-webkit-transition: 1s;
+	transition: 1s;
+	margin-left: 0;
+}
+
+.animate.ng-leave-active {
+	margin-left: 100%;
+}
+
+.ng-enter,.ng-leave {
+	-webkit-transition: all .5s cubic-bezier(0, 1.6, 1, -0.01);
+	-moz-transition: all .5s cubic-bezier(0, 1.6, 1, -0.01) all;
+	-ms-transition: all .5s cubic-bezier(0, 1.6, 1, -0.01);
+	-o-transition: all .5s cubic-bezier(0, 1.6, 1, -0.01);
+	transition: all .5s cubic-bezier(0, 1.6, 1, -0.01);
+}
+
+.ng-enter {
+	left: 100%;
+}
+
+.ng-enter.animate-enter-active {
+	left: 0;
+}
+
+.ng-leave {
+	left: 0;
+}
+
+.ng-leave.animate-leave-active {
+	left: -100%;
+}
+</style>
+
+
+
+
+<script>
+	angular.module('animate',
+
+	[ 'ngAnimate' ])
+</script>
+
+
+</head>
+
+
+
+
+<body>
+
+
+<div data-ng-init="names=['this is firstone', 'this is secondone','this is thirdone']">
+
+
+
+		<ul>
+
+
+			<li data-ng-repeat="user in names"><a>{{user}}</a></li>
+
+
+		</ul>
+
+
+	</div>
+
+
+</body>
+
+
+</html>
+-->

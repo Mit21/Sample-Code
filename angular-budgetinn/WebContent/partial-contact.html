@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <h1>Contact</h1>
+            <hr class="line"/>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <i class="fa fa-location-arrow fa-3x"></i>
+                <h4><strong>Budget Inn</strong></h4>
+                <h5>440 State Route 104</h5>
+                <h5>Ontario, New York</h5>
+                <h5>14519</h5>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <i class="fa fa-envelope fa-3x"></i>
+                <h4><strong>Email</strong></h4>
+                <h5><strong>Email</strong>:-budgetinnontario@gmail.com</h5>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <i class="fa fa-phone fa-3x"></i>
+                <h4><strong>Phone</strong></h4>
+                <h5><strong>Office</strong>:-(585)-265-1881</h5>
+                <h5><strong>fax</strong>:-(585)-265-1875</h5>
+                <h5><strong>Front Desk</strong>:-(585)-265-1881/(585)-265-1882</h5>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <google-map control="map.control" center="map.center" zoom="map.zoom">
+                <marker coords="marker.center"></marker>
+            </google-map>
+        </div>
+
+
+            <div class="col-md-4">
+                <div class="col-md-12 blankDiv">
+
+                </div>
+                <div class="col-md-12">
+                    <div class="well">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="origin" class="col-md-4 control-label">Destination:-</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="origin" class="form-control" ng-model="directions.origin"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination" class="col-md-4 control-label">Current Location:-</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="destination" class="form-control" ng-model='city'/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-8">
+                                    <button class="btn btn-primary" ng-click="getDirections()">Get Directions</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <div class="col-md-12">
+        <div id="directionsList" ng-show="directions.showList" class="panel panel-primary"></div>
+    </div>
+
+
+
+

@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="ui.bootstrap.demo">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+    
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+<div ng-controller="CarouselDemoCtrl">
+  <div style="height: 305px">
+    <carousel interval="myInterval">
+      <slide ng-repeat="slideImg in slides" active="slide.active">
+        <img data-ng-src={{slideImg}} style="margin:auto;">
+        
+      </slide>
+    </carousel>
+  </div>
+  
+   
+  
+</div>
+<script>  
+
+angular.module('ui.bootstrap.demo', ['ui.bootstrap']);
+angular.module('ui.bootstrap.demo').controller('CarouselDemoCtrl', function ($scope) {
+  $scope.myInterval = 2000;
+  var slides = $scope.slides = ['images/phone1.jpg','images/apps.jpg','images/phone3.jpg','images/slider3.jpg','images/slider2.jpg'];
+
+});
+</script>
+</body>
+</html>

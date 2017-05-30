@@ -1,0 +1,67 @@
+        {
+    "allProducts": [
+        {
+           
+            "price": 20.99,
+            "image_path":"images/accessories1.jpg",
+            "stock_availability": "true",
+            "no_of_items": "10"
+        },
+        {
+           
+            
+            "price": 49.00,
+            "image_path":"images/accessories2.jpg",
+            "stock_availability": "true",
+            "no_of_items": "14"
+        },
+        {
+            
+            
+            "price": 79.99,
+            "image_path": "images/accessories3.jpg",
+            "stock_availability": "true",
+            "no_of_items": "14"
+        },
+        {
+          
+            
+            "price": 50.00,
+            "image_path": "images/accessories4.jpg",
+            "stock_availability": "true",
+            "no_of_items": "10"
+        },
+        {
+            
+            "price": 25.50,
+            "image_path": "images/accessories5.jpg",
+            "stock_availability": "true",
+            "no_of_items": "15"
+        },
+        {
+            
+            
+            "price": 19.99,
+            "image_path": "images/accessories6.jpg",
+            "stock_availability": "true",
+            "no_of_items": "12"
+        },
+        {
+           
+            
+            "price": 99.99,
+            "image_path": "images/accessories7.jpg",
+            "stock_availability": "true",
+            "no_of_items": "15"
+        },
+        {
+           
+            
+            "price": 99.99,
+            "image_path": "images/accessories7.jpg",
+            "stock_availability": "true",
+            "no_of_items": "15"
+        }
+    ]
+}
+ 

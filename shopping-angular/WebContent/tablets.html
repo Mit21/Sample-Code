@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>tabletView</title>
+<script type="text/javascript"src="Jquerylib/jqru.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js" ></script>
+</head>
+<body>
+
+
+<ul class="tabletlist list-unstyled" data-ng-repeat="item in tablet | filter:query">
+ <li class="tabletliste"data-ng-animate="animate">
+  <img  class="picture"data-ng-src={{item.image_path}}>   
+   <span  class="price_detail"style="color:red">{{item.price | filter:query }}   {{item.shipping_details}}</span>
+    <button class="buy_button" data-ng-click="addToCart(item)">Add to cart</button> 
+    <button class="wishList_button" ng-click="addToWishList(item)">Add to wishlist</button> 
+   </li>
+ </ul>
+
+<script type="text/javascript" src="javascript/shop.js"></script>
+
+</body>
+</html>

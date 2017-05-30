@@ -1,0 +1,36 @@
+{
+    "allProducts": [
+        {
+            "image_path":"images/Los.jpg",
+            "email":"anoop@pro-tekconsulting.com",
+            "phone":"818-527-0914",
+             "state":"Los Angle"
+            
+        },
+        {
+            
+            "image_path":"images/Sanjose.jpg",
+            "email":"heitinder@pro-tekconsulting.com",
+            "phone":" 408-966-2034",
+             "state":"Sanjose"
+            
+        },
+        {
+            
+            "image_path": "images/nj.jpg",
+            "email":"vikram@pro-tekconsulting.com",
+            "phone":"847-764-9888",
+             "state":"New Jersey"
+           
+        },
+        {
+            
+            "image_path": "images/chicago.jpg",
+            "email":"shachi@pro-tekconsulting.com",
+            "phone":"847-764-9888",
+             "state":"Chicago"
+        }
+
+    ]
+}
+ 

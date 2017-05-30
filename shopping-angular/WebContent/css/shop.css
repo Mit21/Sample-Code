@@ -1,0 +1,147 @@
+#mainCnt {
+	border: 2px solid rgb(0, 0, 0);
+}
+
+#navhead {
+	margin: 23px 0 0;
+}
+
+.leftdiv {
+	box-shadow: 10px 10px 5px #888888;
+	text-shadow:10px 10px 5px #888888;
+	background-color: purple;
+	font-weight: 900;
+	height: 942px;
+	width: 150px;
+	margin: 3px 0px 16px 138px;
+}
+
+#email {
+	margin: 1px;
+}
+
+#phoneNumber {
+	margin: 1px;
+}
+
+#state {
+	color: rgb(0, 0, 255);
+}
+
+.imageSlider2 {
+	height: 300px;
+	margin: 0 88px 0 72px;
+	width: 400px;
+}
+
+.picture4 {
+	margin: 1px;
+}
+
+#navWrapper {
+	margin: 0 0 0 300px;
+}
+
+#headWrapper {
+	background-color: rgb(128, 0, 128);
+	height: 79px;
+}
+
+#headWrapper a {
+	color: rgb(255, 255, 255);
+	float: right;
+	font-size: 19px;
+	margin: 10px;
+}
+
+.product {
+	margin: -21px 742px 0 88px;
+	position: absolute;
+}
+
+.buy_button {
+	margin: 44px 9px 342px;
+	position: relative;
+}
+
+.price_detail {
+	margin: 53px 0 0 63px;
+	position: relative;
+}
+
+.picture {
+	height: 110px;
+	margin: 3px 0 0;
+	position: relative;
+}
+
+#footerbottom {
+	background-color: rgb(0, 0, 0);
+	border: 1px solid rgb(255, 165, 0);
+	color: rgb(255, 255, 255);
+	height: 141px;
+	margin: 2px 0 0 137px;
+	width: 1159px;
+	box-shadow: 2px 11px 8px 19px #e7e7ef;
+}
+
+#footerbottom a {
+	color: rgb(255, 165, 0);
+}
+
+.twiter {
+	margin: 1px;
+	padding: 1px;
+}
+
+#viewDiv {
+	border: 4px solid rgb(128, 0, 128);
+	height: 942px;
+	margin: 1px 0 0 300px;
+	overflow: auto;
+	width: 796px;
+	box-shadow: 2px 11px 8px 19px #e7e7ef;
+}
+
+#right_section {
+	border: 1px solid;
+	float: right;
+	height: 300px;
+	width: 200px;
+}
+
+#sect {
+	color: white;
+	box-shadow: 3px 0px 5px 7px #e7e7ef;
+}
+
+#leftDiv {
+	border: 1px solid rgb(128, 0, 128);
+	height: 942px;
+	margin: 3px 0 16px 138px;
+	width: 150px;
+}
+
+.phoneliste {
+	height: 132px;
+}
+
+.tabletlist {
+	height: 132px;
+}
+
+.computerlist {
+	height: 132px;
+}
+
+.accessorieslist {
+	height: 132px;
+}
+
+.accessoriesliste {
+	margin: -221px 0px 31px;
+}
+
+.wishList_button {
+	margin: 44px 17px 0px 33px;
+}

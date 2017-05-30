@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>detailForPhone</title>
+
+</head>
+<style>
+#imgDiv img {
+   
+   height:300px;
+   width:300px;
+   margin:1px  160px;
+}
+#listImages{
+   
+    height: 229px;
+    margin: 1px 84px;
+    width: 500px;
+    color:purple;
+}
+ #listImages ul li{
+          display:inline;
+} 
+</style>
+
+
+</head>
+<body>
+<div id="imgDiv">
+<img data-ng-src="{{mainImg}}" class="phone">
+</div>
+<div id="listImages">
+<ul  class="inline unstyled">
+  <li data-ng-repeat="img in mainImageUrl">
+    <img data-ng-src={{img}} data-ng-click="setImage(img)">
+  </li>
+</ul>
+<h1>Product_Discription</h1>
+<h5>{{discription}}</h5>
+<h1>customer_reviews</h1>
+<h5>{{customReviews}}</h5>
+</div>
+
+ 
+</body>
+</html>

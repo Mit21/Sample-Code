@@ -1,0 +1,17 @@
+<form>
+<legend>Employee Details</legend>
+	<label for="Name" class="stronglabel">Employee ID:</label>
+	<input type="text"  name="employeeid" data-ng-model="user.EmployeeId" required><br>
+	<label for="firstname" class="stronglabel">First Name:</label>
+	<input type="text"  name="firstname" data-ng-model="user.FirstName" required><br>
+	<label for="lastname" class="stronglabel">Last Name:</label>
+	<input type="text"  name="lastname" data-ng-model="user.LastName" required><br>
+	<label for="middlename" class="stronglabel">Middle Name:</label>
+	<input type="text"  name="middlename" data-ng-model="user.MiddleName" required><br>
+	<label for="birthdate" class="stronglabel">Date Of Birth:</label>
+	<input type="text"  name="birthdate" data-ng-model="user.Birthdate" required><br>
+	<label for="age" class="stronglabel">Age:</label>
+	<input type="text" name="age"data-ng-model="user.Age" required><br>
+	<button type="button" class="btn btn-primary stronglabel" data-ng-click="update()">Update</button>
+	<button type="button" class="btn btn-primary stronglabel" data-ng-click="cancel()">Cancel</button>
+</form>

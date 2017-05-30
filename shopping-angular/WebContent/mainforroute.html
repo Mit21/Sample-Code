@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html data-ng-app="phonecatApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>routeparam</title>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script> 
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+
+
+
+</head>
+<body data-ng-controller="PhoneListCtrl">
+ 
+<ul class="list-unstyled inline" >
+ <li data-ng-repeat="item in phones"  id={{item.phoneId}}>
+<a href="#phones/:{{item.phoneId}}" >
+ <img  class="picture"data-ng-src="{{item.image_path}}"> </a>
+ <!--  <h5 class="product" style="color:blue"><i>product description:</i><br> {{item.product_description}}</h5> --> 
+<span  class="price_detail"style="color:red">{{item.price }}</span>
+<button class="buy_button" data-ng-click="addToCart(item)">Add to cart</button> 
+ <button class="wishList_button" data-ng-click="addToWishList(item)">Add to wishlist</button>  
+ 
+ </li>
+ </ul>
+<div data-ng-view=""></div>
+
+
+<script type="text/javascript" src="javascript/routparam.js"></script>
+
+</body>
+</html>

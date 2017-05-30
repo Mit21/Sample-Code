@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>phoneView</title>
+
+</head>
+<body>
+
+<ul class="list-unstyled" >
+ <li data-ng-repeat="item in phone |filter :query" class="phoneliste">
+   <a href="#Mobile/:{{item.phoneId}}" >
+   <img  class="picture" data-ng-src={{item.image_path}} id={{item.brand}}> </a>  
+   <span  class="price_detail"style="color:red">{{item.price | filter:query}}   {{item.shipping_details}}</span>
+   <button class="buy_button" data-ng-click="addToCart(item)">Add to cart</button> 
+   <button class="wishList_button" data-ng-click="addToWishList(item)">Add to wishlist</button>  
+  </li>
+</ul>
+
+<script type="text/javascript" src="javascript/shop.js"></script>
+</body>
+</html>

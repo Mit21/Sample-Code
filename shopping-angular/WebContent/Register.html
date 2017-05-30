@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>RegisterView</title>
+<style>
+#box{
+width:700px;
+height:700px;
+border:2px solid red;
+}
+#box img{
+transform:translate3d(0,358px,0);
+transition:all .5s cubic-bezier(0,1.6,1,-0.01);
+}
+#box img:hover{
+transform:translate3d(0,0px,0);
+corsur:pointer;
+}
+
+
+</style>
+</head>
+<body>
+<div id="box">
+<img  class ="slider"src="images/apps.jpg"/>
+<img  class ="slider"src="images/phone2.jpg"/> 
+</div>
+<!-- <div class="container" id="dialog1">
+<form class="form-vertical" name="myForm" role="form">
+
+     <label class="col-sm-2 control-label">First Name:</label><input type="text" data-ng-model="fName" name="userF" placeholder="First Name"  ng-required="true"> 
+      <span style="color:red" data-ng-show ="myForm.userF.$dirty && myForm.userF.$invalid">
+      <span data-ng-show ="myForm.userF.$error.required">error</span>
+      </span><br>
+  
+     <label class="col-sm-2 control-label">Last Name:</label><input type="text" data-ng-model="lName" name="userL" placeholder="Last Name"  required>
+     
+      <span style="color:red" data-ng-show ="myForm.userL.$dirty && myForm.userL.$invalid">
+      <span data-ng-show="myForm.userL.$error.required">Username is required.</span>
+      </span><br>
+      
+      
+      <label class="col-sm-2 control-label">Email:</label><input type="email" data-ng-model="email" name="email" placeholder="Email"  required>
+       <span style="color:red" data-ng-show ="myForm.email.$dirty && myForm.email.$invalid">
+       <span data-ng-show ="myForm.email.$error.required">Email is required.</span>
+        <span data-ng-show  ="myForm.email.$error.email">Invalid email address.</span>
+       </span><br>
+       
+ <label class="col-sm-2 control-label">I Agree:</label><input type="checkbox" data-ng-model="Agree"  required><br>
+
+ <label class="col-sm-2 control-label">Password:</label><input type="password" data-ng-model="passw1" placeholder="Password"  required> <br>
+ <label class="col-sm-2 control-label">Repeat:</label> <input type="password" data-ng-model="passw2" placeholder="Repeat Password"  required><br>
+  
+    <input type="submit" data-ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+  myForm.email.$dirty && myForm.email.$invalid">
+</form>
+
+</div>
+
+<ul data-ng-show=>
+<li>{{fName}}</li>
+<li>{{lName}}</li>
+<li>{{email}}</li>
+<li>{{Agree}}</li>
+<li>{{passw1}}</li>
+<li>{{"passw2}}</li>
+
+</ul> -->
+</body>
+</html>

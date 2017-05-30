@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>slider</title>
+<script type="text/javascript" src="http://code.angularjs.org/1.2.4/angular.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.2.4/angular-animate.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.2.4/angular-route.js"></script>
+
+</head>
+<style>
+
+
+
+
+.view-container {
+  height:500px;
+  position:relative;
+}
+
+.view-animation.ng-enter {
+  -webkit-animation: enter_animation 1s; 
+  animation: enter_animation 1s; 
+
+  left:100%;
+}
+
+.view-animation.ng-leave {
+  -webkit-animation: leave_animation 1s; 
+  animation: leave_animation 1s;
+  left:0%;
+}
+
+.view-animation.ng-leave,
+.view-animation.ng-enter {
+  position:absolute;
+  top:0;
+  width:100%; 
+}
+
+@keyframes enter_animation {
+  from { left:100%; }
+  to { left:0; }
+}
+
+@-webkit-keyframes enter_animation {
+  from { left:100%; }
+  to { left:0; }
+}
+
+@keyframes leave_animation {
+  from { left:0; }
+  to { left:-100%; }
+}
+
+@-webkit-keyframes leave_animation {
+  from { left:0; }
+  to { left:-100%; }
+}
+
+</style>
+
+<button data-ng-click="goto('/prev')">pre</button>
+<button data-ng-click="goto('/next')">next</button>
+<div class="view-container">
+  <div data-ng-view class="view-animation"></div> 
+ 
+
+ 
+</div><script type="text/ng-template" id="one.html">
+  <div id="donot_think" class="container" ng-init="names=['images/slider2.jpg', 'images/slider3.jpg','images/laptop3.jpg']">
+  <ul id="imageSlider">
+     <li  data-ng-repeat="images in names" class ="view-animation">
+         <img class="imageSlider2" data-ng-src="{{images}}"></img>
+     </li>
+  </ul> 
+</div>
+</script>
+
+
+<script type="text/ng-template" id="two.html">
+ <p> Page Two works well,</p>
+<h1>this is heading</h1>
+</script>
+
+<script>
+angular.module('myApp', ['ngAnimate', 'ngRoute'])
+
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/prev', {
+      templateUrl : 'one.html'
+    });
+    $routeProvider.when('/next', {
+      template : '<img ng-src="images/apps.jpg"/>'
+    });
+  }])
+ 
+  .run(['$rootScope', '$location', function($rootScope, $location) {
+    $rootScope.goto = function(path) {
+      $location.path(path);
+      
+    }
+  }]);
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+

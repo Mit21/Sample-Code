@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<link rel="stylesheet" href="CSS/jqueryAssignment.css">
+<script type="text/javascript" src="JS/lib/jquery-1.11.2.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+<body>
+	<div class="container mainDiv">
+		<div class="container-fluid subDiv">
+			<h1>
+				<b>Task Tracker</b>
+			</h1>
+			<h6>V2.0</h6>
+		</div>
+		<div class="container-fluid contentDiv">
+			<div class="row">
+				<div class="col-md-6 formDiv">
+					<h4>
+						<b>Create a Task</b>
+					</h4>
+					<label>Task Name</label><br> 
+					<input id="taskname" class="forInput" type="text" name="Taskname" placeholder="Task Name"><br>
+					<label>Date</label><br> 
+					<input id="date" class="forInput" type="date" name="date" placeholder="Date"><br> 
+					<label>AssignedTo</label><br> 
+					<input id="assigned" class="forInput" type="text" name="AssignedTo" placeholder="AssignedTo"><br> 
+					<input id="btnSubmit" type="button" name="submit" value="Submit">
+				</div>
+				<div class="col-md-6 tableDiv">
+					<h4>
+						<b>Existing Task</b>
+					</h4>
+					<table class="table table-striped jsonTable">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Date</th>
+								<th>AssignedTo</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	
+	<script type="text/javascript" src="JS/jqueryAssignment.js"></script>
+</body>
+</html>

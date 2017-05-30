@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html data-ng-app="shopApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Shopping Site</title>
+<link rel="stylesheet" href="css/shop.css"/>
+<link rel="stylesheet" href="ngDialog/css/ngDialog.min.css"/>
+<link rel="stylesheet" href="ngDialog/css/ngDialog-theme-plain.min.css"/>
+<link rel="stylesheet" href="ngDialog/css/ngDialog-theme-default.min.css"/>
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script> 
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-route.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-animate.min.js"></script>
+<script type="text/javascript" src="javascript/ngDialog.min.js"></script> 
+ <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+ 
+</head>
+<body id="body" data-ng-controller="fCtrl">
+<div id="headWrapper"><img id="logo" src="images/pro-logo.jpg">
+ <a href="#" data-ng-dialog="DialogBox" data-ng-dialog-class="ngdialog-theme-default">singIn</a><a href="#" data-ng-dialog="Register">Register</a>
+ <lable style="color:white;font-size: 19px;">search for</lable>
+  <input  data-ng-model="query" placeholder="search for" autofocus>
+  
+ <a href="#wishList" style="background-color:white;color:purple;"><button id="wishlist">wishList({{wishListLen}})</button></a>
+ <a href="#shoppingBag" style="background-color:white;color:purple;"><button id="shoppingbag" data-ng-click="addToCart()">shoppingBag({{shoppingBagLen}})</button></a>
+</div>
+
+
+<div id="navWrapper" class="container">
+  <div class="btn-group" id="navhead" data-ng-repeat="list in list">
+  
+ <a href="#{{list}}"> <button data-ng-class={{list+'Active'}} data-ng-click="buttonClick(list)" id={{list}} type="button"
+   style="background-color:;color:;" class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{list}}<span class="caret"></span>
+  </button></a>
+ <ul class="dropdown-menu">
+  <li data-ng-repeat="subList in subList"><a href="#{{subList}}">{{subList}}</a></li>
+  </ul>  
+ </div>
+</div>
+
+<div class="pull-right span6"style="border:1px solid purple;height: 942px;width:250px;overflow-y:auto;overflow-x:auto;">
+<p>This is your shoppingList</p>
+<ul class="list-unstyled">
+<li data-ng-repeat="shoppingList in purchasedArr">
+
+<img data-ng-src="{{shoppingList.image_path}}"/>{{shoppingList.price | currency}}
+<button class="Remove_button" data-ng-click="remove(shoppingList)">Remove</button> 
+</li></ul>
+<h5>TOTAL PRICE={{total | currency}}</h5>
+</div>
+<div id="sect" class="pull-left span6 leftdiv">
+<h2>SALE</h2>
+<h3>40% OFF</h3><br>
+<span>ON Thanksgiving.</span><br>
+<p> Hurry Up sale end on 01/02/2015</p>
+</div>
+
+<div class="container" id="viewDiv" data-ng-view=""></div>
+
+<footer id="footerbottom">
+<a href="https://www.twiter.com"><img class="twiter" src="images/twiter.jpg"></a>
+<a href="https://www.facebook.com"> <img class="twiter" src="images/facebook.jpg"></a>
+<a href="https://www.youtube.com"> <img class="twiter" src="images/youtube.jpg"></a>
+<a href="#"> 732 763 7890<img class="twiter" src="images/phone.jpg"></a>
+<a href="https://www.pro-tekconsulting.com"> <img class="twiter" src="images/thumb.jpg"></a>
+<a href="https://www.pro-tekconsulting.com"></a> <img class="twiter" src="images/trusticon.jpg"><br>
+Copyright © 2014 Pro-Tek Consulting. All Rights Reserved
+</footer>
+
+  <script type="text/ng-template" id="DialogBox">
+<div class="ngdialog-content">
+User Name:<input type="text" data-ng-model="email"  placeholder="Email" required><br><br>
+<span style="color:red" ng-if="(email!==email1)">please enter same email</span><br>
+Password: <input type="password"data-ng-model="spassword" placeholder="password" required><br><br>
+<span style="color:red" ng-if="(spassword!==password2)">please enter same password</span><br>
+<input type="submit" ng-disabled="" data-ng-click="closeDialog()">
+</div>
+</script>
+
+  <script type="text/ng-template" id="Register">
+<div class="ngdialog-content">
+<form class="form-vertical" name="myForm" novalidate>
+
+FirstName:<input type="text" ng-model="fName" placeholder="FirstName" name="userF" ng-required="true" ng-pattern="/^[a-z]+$/img"><br>
+<span style="color:red" data-ng-show ="myForm.userF.$dirty && myForm.userF.$invalid">error:
+<span style="color:red"  data-ng-show="myForm.userF.$error.required">Username is required.</span></span>
+<span style="color:red" ng-show="myForm.userF.$error.pattern">please check the name</span><br>
+
+LastName:<input type="text" placeholder="LastName"name="userL" ng-required="true"ng-model="lName"  ng-pattern="/^[a-z]+$/img"><br>
+<span style="color:red" data-ng-show="myForm.userL.$dirty && myForm.userL.$invalid">error:
+<span  style="color:red" data-ng-show="myForm.userL.$error.required">UserLastName is required.</span></span>
+<span style="color:red" ng-show="myForm.userL.$error.pattern">please check the lastName</span><br>
+
+User Id:<input type="email" data-ng-model="email1"  placeholder="Email"name="userE" ng-required="true" ng-pattern="/^[a-z0-9]+@+.com$/img"><br>
+<span style="color:red" data-ng-show="myForm.userE.$dirty && myForm.userE.$invalid">
+<span style="color:red" data-ng-show="myForm.userE.$error.required">UserEmail is required.</span></span>
+<span style="color:red" ng-show="myForm.userE.$error.pattern">please enter currect email</span><br>
+
+Password: <input type="password" ng-model="password1" placeholder="password"name="userPass" ng-required="true" ng-pattern="/^[a-z0-9]$/img"><br>
+<span style="color:red" data-ng-show="myForm.userPass.$dirty && myForm.userPass.$invalid">
+<span style="color:red" data-ng-show="myForm.userPass.$error.required">password is required.</span>
+<span style="color:red" ng-show="myForm.userPass.$error.pattern">please enter currect password</span></span><br>
+
+Re-Password: <input type="password" placeholder="Re-password" ng-model="password2" name="rePass" ng-required ="true">
+<span style="color:red" ng-if="(password1!=password2)">please enter same password</span><br>
+
+
+
+<input type="submit" data-ng-disabled="myForm.$invalid" data-ng-click="closeDialog()">
+</form>
+</div>
+</script>
+
+
+
+
+ 
+
+
+<script type="text/javascript" src="javascript/shop.js"></script>
+</body>
+</html>
