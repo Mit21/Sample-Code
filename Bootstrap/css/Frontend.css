@@ -1,0 +1,141 @@
+body {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 19px;
+	font-weight: 400;
+}
+
+.Combustion-Logo {
+	margin: 25px 0px 0px 0px;
+	display: inline !important;
+}
+
+.container-fluid {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.shadow-Effects {
+	box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 0.8) inset;
+	opacity: 0.8;
+	width: 100%;
+}
+
+.btncustomize {
+	margin-left: 40px !important;
+	width: 65px !important;
+}
+
+#login {
+	margin-left: 5px !important;
+}
+/* --------------------------------------Navigation-Bar Start--------------------------- */
+.Combustion ul {
+	margin: 35px 0px 0px 0px;
+	width: 100%;
+}
+
+.Combustion ul li {
+	display: inline !important;
+	list-style: outside none none;
+	margin: 0;
+	padding: 0;
+}
+
+.Combustion ul li a {
+	font-size: 16px;
+	margin: 0 15px;
+	padding: 10px 0;
+	color: black;
+	font-family: "Montserrat", Arial, sans-serif;
+}
+
+.navbar {
+	margin: 25px 0px 0px 0px;
+}
+
+/* --------------------------------------Navigation-Bar End--------------------------- */
+
+/* --------------------------------------Navigation-Bar Button--------------------------- */
+#Combustion_menu_open_btn {
+	margin-top: 45px !important;
+}
+
+.Combustion-hamburger_btn {
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	position: relative;
+	cursor: pointer;
+	border: 0px transparent !important;
+	padding: 12px 10px !important;
+}
+
+.Combustion-hamburger_btn span.Combustion_one {
+	top: 1px;
+}
+
+.Combustion-hamburger_btn span.Combustion_two, .Combustion-hamburger_btn span.Combustion_three
+	{
+	top: 50%;
+	margin-top: -3%;
+}
+
+.Combustion-hamburger_btn span.Combustion_four {
+	bottom: 0;
+}
+
+.Combustion-hamburger_btn span {
+	display: block;
+	position: absolute;
+	height: 15%;
+	width: 100%;
+	background: #999;
+	opacity: 1;
+	left: 0;
+}
+/* --------------------------------------Navigation-Bar-End--------------------------- */
+.ExtraDiv {
+	box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.8) inset;
+	opacity: 0.8;
+	width: 100%;
+}
+
+.cover-hero {
+	height: 350px !important;
+	width: 100%;
+	margin-top: 25px;
+}
+
+.back_arrow {
+	float: left;
+}
+
+.arrowHeader {
+	position: relative;
+	left: 10px;
+	color: #5EB6DB;
+}
+
+.para {
+	margin-top: 30px;
+}
+
+.BgFooter {
+	background-color: black;
+}
+
+.footerNav ul li a {
+	color: #fff !important;
+	margin-right: 60px;
+}
+
+@media ( max-width : 465px) {
+	.btncustomize {
+		margin-left: 0px !important;
+		width: 65px !important;
+	}
+	.cover-hero {
+		height: 150px !important;
+		width: 100%;
+	}
+}
