@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/TreeView.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<title>treeview</title>
+
+<script type="text/javascript">
+	$( document ).ready( function( ) {
+	    $( '.treeview li' ).each( function() {
+	        if( $( this ).children( 'ul' ).length > 0 ) {
+	            $( this ).addClass( 'parent' );     
+	        }
+	    });
+	    $( '.treeview li.parent > span' ).click( function( ) {
+	        $( this ).parent().toggleClass( 'active' );
+	        $( this ).parent().children( 'ul' ).slideToggle( 'fast' );
+	    });
+
+	    $( '#all' ).click( function() {
+
+	        $( '.treeview li' ).each( function() {
+	            $( this ).toggleClass( 'active' );
+	            $( this ).children( 'ul' ).slideToggle( 'fast' );
+	        });
+	    });
+
+	});
+	</script>
+	
+	
+</head>
+<body>
+	<div class="container">
+		<div class="treeview">
+			<ul>
+				<li><span class="glyphicon glyphicon-folder-open">&nbsp;<a>Node Label</a></span>
+					<ul>
+						<li><span class="glyphicon glyphicon-chevron-down">&nbsp;<a>Child Node Label</a></span>
+							<ul>
+								<li><span class="glyphicon glyphicon-chevron-down">&nbsp;<a>Child Node Label-1</a></span>
+									<ul>
+										<li><span class="glyphicon glyphicon-circle-arrow-right">&nbsp;<a>Iteam-1</a></span></li>
+										<li><span class="glyphicon glyphicon-circle-arrow-right">&nbsp;<a>Iteam-2</a></span></li>
+										<li><span class="glyphicon glyphicon-circle-arrow-right">&nbsp;<a>Iteam-3</a></span></li>
+									</ul></li>
+								<li><span class="glyphicon glyphicon-minus-sign">&nbsp;<a>Child Node Label-2</a></span></li>
+								<li><span class="glyphicon glyphicon-minus-sign">&nbsp;<a>Child Node Label-3</a></span></li>
+							</ul></li>
+					</ul></li>
+				<li><span class="glyphicon glyphicon-leaf">&nbsp;<a>Leaf Node Label</a></span></li>
+			</ul>
+		</div>
+	</div>
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="js\jquery-2.2.0.min.js"></script> -->
+</body>
+</html>

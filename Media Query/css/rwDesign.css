@@ -1,0 +1,190 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+}
+.customNav {
+    height: 85px;
+    padding: 11px 0 0 64px;
+    width: 300px;
+}
+div ul li a {
+    border-right: 2px solid grey;
+}
+.removeBorderNav{
+	border-right:none;
+}
+span.badgeNav {
+    background-color: lightgray;
+    border-radius: 16px;
+    margin-right: 12px;
+    padding: 11px 14px;
+}
+#contentDiv {
+    border: 1px solid transparent;
+    height: 200px;
+    padding: 0 0 0 350px;
+    width: 50%;
+}
+#imageDiv {
+    border: 2px solid lightgray;
+    height: 200px;
+    margin-left: 35px;
+    width: 22%;
+    padding: 12px 0px 0px 10px;
+}
+.headColor{
+	color:red;
+}
+.headFont{
+	font-size:115%;
+}
+.firstDiv {
+    border: 1px solid black;
+    height: 344px;
+    width: 20%;
+    color: white;
+    background-color:black;
+    line-height: 0px;
+    margin: 0px 0px 0px 0px;
+}
+#firstDivone {
+    font-size: 115%;
+    line-height: 0;
+    margin: 26px 0 0 189px;
+}
+.firstDivTwo {
+    font-size: 370%;
+    margin: 6px 0 0 180px;
+}
+.secondDiv{
+	border:1px solid black;
+	height:344px;
+	width:40%;
+	margin: 0px 0px 0px 0px;
+}
+.thirdDiv{
+	border:2px solid black;
+	height:344px;
+	width:40%;
+	background-color:black;
+	margin: 0px 0px 0px 0px;
+	
+}
+.midImg{
+	height:100% !important;
+	width:100% !important;
+}
+span.btn {
+	padding: 8px 0;
+	border-radius: 20px;
+	float: left;
+	background: #ed1c24;
+	font-family: 'Conv_AvenirLTStd-Light';
+}
+span.btn a {
+	padding: 8px 30px;
+	font-family: 'Conv_AvenirLTStd-Light';
+	color: #fff;
+	text-decoration: none;
+}
+.thirdDiv span {
+	font-size: 14pt;
+	text-align: left;
+	margin-top: 6px;
+	float: left;
+	color:white;
+	font-family: 'Conv_AvenirLTStd-Light';
+}
+.thirdDiv h4{
+	color:white;
+}
+.footer {
+	float: left;
+	width: 100%;
+	padding-top: 70px;
+}
+.footer h1 {
+	text-align: center;
+	width: 56%;
+	color: #ee3124;
+	margin: auto;
+}
+.section {
+    background-color: black;
+    height: 344px;
+    margin: 30px 0px 0px 0px;
+}
+@media all and (max-width: 800px) { /* screen size until 500px */
+	div ul li a {
+		border-right: none;
+	}
+#contentDiv{
+	border:1px solid transparent;
+	width:90%;
+	height:200px;
+	margin-left:10px;
+	padding:0px 0px 0px 50px;
+}
+#imageDiv {
+    border: 2px solid lightgray;
+    height: 235px;
+    margin-left: 62px;
+    padding: 12px 0 0 10px;
+    width: 56%;
+}
+.imgMid {
+    height: 100%;
+    width: 98%;
+}
+.headColor{
+	color:red;
+}
+.firstDiv {
+    background-color: black;
+    border: 1px solid;
+    color: white;
+    height: 240px;
+    line-height: 0;
+    width: 56%;
+    margin: 20px 0px 0px 61px;
+}
+#firstDivone {
+    font-size: 124%;
+    line-height: 0;
+    margin: 23px 0 0 115px;
+}
+.firstDivTwo {
+    font-size: 425%;
+    margin: 6px 0 0 175px;
+}
+.secondDiv{
+	border:1px solid;
+	height:240px;
+	width:56%;
+	margin: 20px 0px 0px 61px;
+	background-color:black;
+	
+}
+.thirdDiv{
+	border:1px solid;
+	height:240px;
+	width:56%;
+	margin: 20px 0px 0px 61px;
+	background-color:black;
+}
+.footer h1 {
+	text-align:left;
+}
+.section{
+    background-color: white;
+    height: 344px;
+    margin: 30px 0px 0px 0px;
+}
+.footer {
+    float: left;
+    margin: 36px 0 0;
+    padding-top: 70px;
+    width: 100%;
+}
+}

@@ -1,0 +1,60 @@
+
+.treeview {
+    min-height:20px;
+    padding:19px;
+    background-color:#fbfbfb;
+    border:1px solid #999;
+    border-radius:4px;  
+}
+.treeview li {
+    list-style-type:none;
+    margin:0;
+    padding:10px 5px 0 5px;
+    position:relative;  
+}
+
+.treeview li span {
+    border:1px solid #999;
+    border-radius:5px;
+    display:inline-block;
+    padding:3px 8px;
+    text-decoration:none;  
+}
+.treeview li::before, .treeviewview li::after {
+    content:'';
+    left:-20px;
+    position:absolute;
+    right:auto
+}
+.treeview li::before {
+    border-left:1px solid #999;
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px
+}
+.treeview li::after {
+    border-top:1px solid #999;
+    height:20px;
+    top:25px;
+    width:25px
+}
+
+.treeview li span a{
+	 font: 16px  sans-serif;
+	 text-decoration:none;
+}
+.treeview li.parent_li>span {
+    cursor:pointer
+}
+.treeview>ul>li::before, .treeviewview>ul>li::after {
+    border:1px solid;
+}
+.treeview li:last-child::before {
+    height:30px
+}
+.treeview li.parent_li>span:hover, .treeviewview li.parent_li>span:hover+ul li span {
+    background:#eee;
+    border:1px solid #94a0b4;
+    color:#000
+}
